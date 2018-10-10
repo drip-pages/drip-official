@@ -692,3 +692,7 @@
 #section-39 p.e_img.pera1-removable img {
   width: 240px;
 }
+
+.news-list p {
+  margin: 0;
+}

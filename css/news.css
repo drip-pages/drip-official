@@ -130,3 +130,7 @@
 		font-size: 10px;
 	}
 }
+
+.news-list p {
+  margin: 0;
+}
