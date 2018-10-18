@@ -6,8 +6,15 @@
   <title>DRIP - Drecom Invention Project</title>
   <meta name="description" content=""DRIP - Drecom Invention Project" is a project to push Drecom to continue inventing new ideas and concepts!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Analytics -->
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-76789833-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
   <link href="css/base.css" rel="stylesheet">
-
   <script src="//assets.peraichi.com/js/const_common.js"></script>
   <script src="//assets.peraichi.com/js/const_production.js"></script>
   <script src="//webfont.fontplus.jp/accessor/script/fontplus.js?5qoPx6QyJ8k%3D&aa=1" charset="utf-8"></script>
@@ -384,16 +391,6 @@ Cheerfully, for Fun but Straight to the goal!</div>
       <div class="e_txt pera1-editable font-size-12px">Copyright 2018 Drecom Co., Ltd. All Rights Reserved.</div>
     </div>
   </div>
-
-  <script id="tmpl_nav" type="text/x-template">
-    <ul class="nav nav-pills nav-stacked">
-          <% _.each(sections, function(section) { %>
-          <li><a href="#<%= section.id %>"><%= section.name %></a></li>
-          <% }) %>
-          </ul>
-        </script>
-  <script id="template_html" type="text/x-template"></script>
-  <div id="dataGaId" data-id="UA-76789833-1" style="display: none;"></div>
 </body>
 
 </html>
