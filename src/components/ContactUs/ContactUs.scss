@@ -1,0 +1,55 @@
+@import "../../utils/vars.scss";
+.ContactUs {
+  background-color: $colorGray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .contents {
+    margin: 10px;
+    font-size: 20px;
+    white-space: nowrap;
+
+    .label {
+      display: inline-block;
+      width: 4em;
+    }
+
+    .message {
+      &:before {
+        content: ':'
+      }
+    }
+  }
+  .contact-button {
+    padding: .5em 1em;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: bold;
+    color: $colorWhite;
+    background-color: $colorButton;
+    border-radius: 30px;
+    border: none;
+    transition: .2s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  @media (max-width: $deviceWidth) {
+    .contents {
+      font-size: 16px;
+      text-align: center;
+      white-space: normal;
+      .label {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px auto;
+        display: block;
+      }
+      .message:before {
+        content: ''
+      }
+    }
+  }
+}

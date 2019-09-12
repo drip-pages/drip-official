@@ -1,0 +1,13 @@
+.NewsList {
+  font-size: 20px;
+  font-style: italic;
+  li {
+    list-style-type: none;
+    margin: 1em 0;
+    strong:before {
+      content: '';
+      margin-right: 0.5em;
+    }
+  }
+
+}

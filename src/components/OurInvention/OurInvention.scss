@@ -1,0 +1,70 @@
+@import "../../utils/vars.scss";
+
+.OurInvention {
+  .our-invention-title-area {
+    background-color: $colorGray
+  }
+
+  .arow {
+    background-color: $colorBlack;
+    color: $colorWhite;
+
+    @media (min-width: $deviceWidth) {
+      .bigLogo {
+        margin-right: 9vw;
+        margin-left: auto;
+      }
+      .smallLogo {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .pillars {
+    background-image: url("../../img/6-pillars_background.png");
+    background-size: cover;
+    @media (min-width: $deviceWidth) {
+      .bigLogo {
+        margin-right: 9vw;
+        margin-left: auto;
+      }
+      .smallLogo {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .loveChain {
+    background-color: #e18c84;
+    color: $colorWhite;
+    a {
+      color: $colorWhite;
+    }
+    strong {
+      margin-top: 1em;
+      font-size: 25px;
+    }
+
+    @media (min-width: $deviceWidth) {
+      .bigLogo {
+        width: 40vw;
+      }
+      .content-area {
+        .smallLogo {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 1em 0;
+    font-size: 20px;
+  }
+
+  @media (max-width: $deviceWidth) {
+    a {
+      text-align: center;
+    }
+  }
+}

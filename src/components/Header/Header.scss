@@ -1,0 +1,116 @@
+@import "../../utils/vars.scss";
+.Header {
+  position: relative;
+  .fixed-area {
+    position: fixed;
+    width: 100%;
+    left: auto;
+    z-index: $headerZ;
+
+    .header-area {
+      background-color: $colorWhite;
+      box-shadow: 0 1px 1px $colorShadow;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+
+      .header-logo {
+        height: 50px;
+      }
+
+      .menu-area {
+        margin: auto;
+        white-space: nowrap;
+        grid-column: 2;
+
+        .native-button {
+          display: none;
+
+          button {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 3px;
+          }
+        }
+
+        .non-native-buttons {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          button {
+            background-color: $colorWhite;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            padding: 0.3em 1em;
+            border: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $changeHeaderButtonWidth) {
+      .header-area {
+        grid-template-columns: 1fr 60px;
+        .header-logo {
+          width: 100%;
+          height: auto;
+          max-width: 425px;
+          max-height: 50px;
+        }
+        .menu-area {
+          .native-button {
+            display: inline;
+          }
+
+          .non-native-buttons {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .underMenu {
+      position: absolute;
+      transition: 0.5s all;
+      visibility: hidden;
+      opacity: 0;
+      max-height: 0;
+      width: 100%;
+      padding-left: 0;
+      background-color: $colorWhite;
+      box-shadow: 0 1px 1px $colorShadow;
+
+      li {
+        padding: 0.5em 2em;
+        list-style-type: none;
+        font-size: 16px;
+        border: 1px solid $colorGray;
+        width: 100%;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.show {
+        transition: 0.5s all;
+        visibility: visible;
+        opacity: 1;
+        max-height: 1000px;
+      }
+    }
+
+    .item {
+      color: $colorBlack;
+    }
+  }
+
+  .padding-area {
+    display: block;
+    padding-top: 50px;
+  }
+}

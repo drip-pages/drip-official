@@ -1,2 +1,3 @@
-# drip-official
-DRIP offisial page.
+# drip-official-dev
+DRIP official development repository
+# memo

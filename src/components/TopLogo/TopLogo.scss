@@ -1,0 +1,14 @@
+.TopLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .inner {
+    padding: 20px;
+    box-sizing: border-box;
+
+    .top-logo{
+      width: 100%;
+    }
+  }
+}
