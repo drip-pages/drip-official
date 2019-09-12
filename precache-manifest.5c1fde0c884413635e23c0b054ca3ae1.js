@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23c20077af8ebbf54340193d4af8be13",
+    "revision": "6638a90a77275edde11f03d897b822e7",
     "url": "/drip-official-dev/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/drip-official-dev/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "9f9bf182334b0392f8a8",
-    "url": "/drip-official-dev/static/css/main.6e0bf5b0.chunk.css"
+    "revision": "88a8199bf615d99979d2",
+    "url": "/drip-official-dev/static/css/main.dd042036.chunk.css"
   },
   {
     "revision": "2a6b5e0e1c71318ff394",
     "url": "/drip-official-dev/static/js/2.85b9fe0b.chunk.js"
   },
   {
-    "revision": "9f9bf182334b0392f8a8",
-    "url": "/drip-official-dev/static/js/main.c230b0cd.chunk.js"
+    "revision": "88a8199bf615d99979d2",
+    "url": "/drip-official-dev/static/js/main.dc200c1c.chunk.js"
   },
   {
     "revision": "4ced9cea0f0e69e6c9e8",
