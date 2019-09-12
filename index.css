@@ -6082,5 +6082,4 @@ img.mfp-img {
 .fa-meanpath:before {
     content: "\f20c"}
 .p-attractSupport-socialPlugin {
-    /* TODO: !importantは削除したい。全部React化した後に影響を見ること */
     margin: 0 auto!important}
