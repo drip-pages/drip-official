@@ -13,7 +13,7 @@ const HelmetWrap = () => (
       { name: 'description', content: description },
       {
         property: 'og:image',
-        content: 'https://drip.drecom.co.jp/img/logo2.png',
+        content: 'https://drip.drecom.co.jp/img/logo.png',
       }, // NOTE: 本家から引っ張っていることに留意するように
       { property: 'og:title', content: 'DRIP - Drecom Invention Project' },
       { property: 'og:site_name', content: 'DRIP' },
