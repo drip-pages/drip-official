@@ -1,0 +1,13 @@
+@import "../../utils/vars.scss";
+.HurgerButton {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  border-color: $colorGray;
+  border-width: 2px;
+  border-radius: 2px;
+  svg{
+    transform: scale(0.5)
+  }
+}

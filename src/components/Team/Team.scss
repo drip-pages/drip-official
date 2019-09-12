@@ -1,0 +1,19 @@
+@import "../../utils/vars.scss";
+.Team {
+  p {
+    text-align: center;
+  }
+  .member-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+
+    .member-icon {
+      margin: 10px;
+    }
+    @media (max-width: $deviceWidth) {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import "../../utils/vars.scss";
+.Slide {
+  padding: 50px;
+  @media (max-width: $deviceWidth) {
+    padding: 25px;
+  }
+ }
