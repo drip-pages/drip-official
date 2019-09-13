@@ -25,7 +25,7 @@
 
 #section-10 .e_btn a,
 #section-17 .e_btn a {
-    content: url(../img/appstore.png);
+    content: url(img/appstore.png);
     height: 47px;
     background-color: transparent;
     border-radius: 0;
@@ -46,7 +46,7 @@
 }
 
 #section-17 .e_btn_android a {
-    content: url(../img/googleplay.png);
+    content: url(img/googleplay.png);
 }
 
 .m_full-leftImg .e_img {
@@ -307,7 +307,7 @@
 
 /* Pass! */
 #section-17 {
-	background: url(../img/pass_background.png);
+	background: url(img/pass_background.png);
 	background-size: cover;
 	color: #fff;
 }
@@ -363,7 +363,7 @@
 
 /* 6-pillars */
 #section-40 {
-	background: url(../img/6-pillars_background.png);
+	background: url(img/6-pillars_background.png);
 	background-size: cover;
 	color: #fff;
 }
@@ -541,22 +541,22 @@
 
 /*01-03*/
 #section-13 .col-sm-3:nth-child(1) img:hover {
-    content: url(../img/naito-ani.gif);
+    content: url(img/naito-ani.gif);
 }
 #section-13 .col-sm-3:nth-child(1) a:hover:after {
-	background-image: url(../img/naito-ani.gif);
+	background-image: url(img/naito-ani.gif);
 }
 #section-13 .col-sm-3:nth-child(2) img:hover {
-    content: url(../img/neco-ani.gif);
+    content: url(img/neco-ani.gif);
 }
 #section-13 .col-sm-3:nth-child(2) a:hover:after {
-	background-image: url(../img/neco-ani.gif);
+	background-image: url(img/neco-ani.gif);
 }
 #section-13 .col-sm-3:nth-child(4) img:hover {
-    content: url(../img/police-ani.gif);
+    content: url(img/police-ani.gif);
 }
 #section-13 .col-sm-3:nth-child(4) a:hover:after {
-	background-image: url(../img/police-ani.gif);
+	background-image: url(img/police-ani.gif);
 }
 
 /*09-10*/
@@ -723,38 +723,38 @@
 	padding-top: 50px;
 }
 #section-38 .col-sm-4:nth-child(1) img:hover {
-    content: url(../img/naito-ani.gif);
+    content: url(img/naito-ani.gif);
 }
 #section-38 .col-sm-4:nth-child(1) a:hover:after {
-	background-image: url(../img/naito-ani.gif);
+	background-image: url(img/naito-ani.gif);
 }
 #section-38 .col-sm-4:nth-child(2) img:hover {
-    content: url(../img/neco-ani.gif);
+    content: url(img/neco-ani.gif);
 }
 #section-38 .col-sm-4:nth-child(2) a:hover:after {
-	background-image: url(../img/neco-ani.gif);
+	background-image: url(img/neco-ani.gif);
 }
 #section-38 .col-sm-4:nth-child(3) img:hover {
-    content: url(../img/mega-ani.gif);
+    content: url(img/mega-ani.gif);
 }
 #section-38 .col-sm-4:nth-child(3) a:hover:after {
-	background-image: url(../img/mega-ani.gif);
+	background-image: url(img/mega-ani.gif);
 }
 
 #section-39 {
 	padding-top: 0;
 }
 #section-39 .col-sm-4:nth-child(1) img:hover {
-    content: url(../img/police-ani.gif);
+    content: url(img/police-ani.gif);
 }
 #section-39 .col-sm-4:nth-child(1) a:hover:after {
-	background-image: url(../img/police-ani.gif);
+	background-image: url(img/police-ani.gif);
 }
 #section-39 .col-sm-4:nth-child(2) img:hover {
-    content: url(../img/master-ani.gif);
+    content: url(img/master-ani.gif);
 }
 #section-39 .col-sm-4:nth-child(2) a:hover:after {
-	background-image: url(../img/master-ani.gif);
+	background-image: url(img/master-ani.gif);
 }
 
 #section-38 p.e_img.pera1-removable img,
