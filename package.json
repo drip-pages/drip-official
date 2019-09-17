@@ -1,7 +1,7 @@
 {
   "name": "drip-official-dev",
   "version": "0.1.0",
-  "homepage": "https://drip-pages.github.io/drip-official-dev/",
+  "homepage": "https://drip.drecom.co.jp/",
   "private": true,
   "dependencies": {
     "@material-ui/icons": "^4.2.1",
