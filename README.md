@@ -82,13 +82,15 @@ en.jsonファイルに
 
 その後、表示したい場所で次の方法で追加します。
 ```js
+import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-```
-```js
-const { t } = useTranslation()
-return (
-  <p>{t('newProductContent_1')}</p>
-)
+
+const example = () => {
+    const { t } = useTranslation()
+    return (
+      <p>{t('newProductContent_1')}</p>
+    )
+}
 ```
 実例として`src/components/TopLogo/index.tsx`を見るとわかりやすいと思います。
 この方法以外にもHOCを使った方法などがあります。
