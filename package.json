@@ -16,7 +16,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "yarn run build && gh-pages -d build",
     "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -67,7 +66,6 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "gh-pages": "^2.0.1",
     "i18next": "^17.0.12",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
