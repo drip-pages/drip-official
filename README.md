@@ -91,6 +91,8 @@ const example = () => {
       <p>{t('newProductContent_1')}</p>
     )
 }
+
+export default example()
 ```
 実例として`src/components/TopLogo/index.tsx`を見るとわかりやすいと思います。
 この方法以外にもHOCを使った方法などがあります。
