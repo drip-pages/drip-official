@@ -58,6 +58,107 @@ $ yarn build
 ```
 ※ カンマ（','）に気をつけて追記
 
+## 文の追加方法（日本語と英語の両方に対応するようにするとき）
+ドリップページ内で日本語と英語の両方に対応する文を追加するには、以下の手順で追加します。
+`src/data/language`にある、ja.jsonとen.jsonを開きます。
+
+このファイルは一意のキーと値がリストになっているjsonファイルです。
+ここに適当なキーと追加したい文章を追記します。
+
+例えば、「これは新しいプロダクトです。」という文を追加します。
+ja.jsonファイルに
+```json
+{
+  "newProductContent_1": "これは新しいプロダクトです。"
+}
+```
+en.jsonファイルに
+```json
+{
+  "newProductContent_1": "This is new Product."
+}
+```
+と追加します。
+
+その後、表示したい場所で次の方法で追加します。
+```js
+import { useTranslation } from 'react-i18next'
+```
+```js
+const { t } = useTranslation()
+return (
+  <p>{t('newProductContent_1')}</p>
+)
+```
+実例として`src/components/TopLogo/index.tsx`を見るとわかりやすいと思います。
+この方法以外にもHOCを使った方法などがあります。
+詳細はdocument参照のこと（https://react.i18next.com/guides/quick-start）
+
+## Our Inventionの追加方法
+Our Inventionのところにプロダクトを追加する方法
+
+`src/components/OurInvention/index.tsx`にある`return`に追加していきます。
+
+例えば以下のように追加します。
+
+```html
+<Invention
+  className="new-product"
+  bigLogo={productBigLogo}
+  smallLogo={productSmallLogo}
+>
+  　<!-- プロダクトで表示したい内容をここに書く -->
+</Invention>
+```
+`className`は他のプロダクトと名前が被らなければ任意に決めて大丈夫です。
+`bigLogo`にはPC画面サイズの時に左側に表示されている大きめのロゴを設定します。
+`smallLogo`にはPC画面サイズの時に右側に表示されている小さめのロゴを設定します。
+
+表示する文章は日本語と英語の両方に対応させたいため、「文の追加方法」の手順を踏んで文を追加します。
+
+仮にja.json、en.jsonに書いたキーを"newProductContent_1"とすると、次のようになります。
+```html
+<Invention
+  className="new-product"
+  bigLogo={productBigLogo}
+  smallLogo={productSmallLogo}
+>
+  <p>{t('newProductContent_1')}</p>
+</Invention>
+```
+
+さらにURLを追加する場合、次のようになります。
+```html
+<Invention
+  className="new-product"
+  bigLogo={productBigLogo}
+  smallLogo={productSmallLogo}
+>
+  <p>{t('newProductContent_1')}</p>
+  <a href="https://sample.com" target="_blank" rel="noopener noreferrer">
+    https://sample.com/
+  </a>
+</Invention>
+```
+
+## Teamの追加方法
+Teamにメンバーを追加するには、`src/components/Team/index.tsx`の`return`に追加します。
+
+例えば以下のように追加します。
+
+```html
+<Member
+  className="member-icon"
+  imgFile={newMemberImage}
+  movieFile={newMemberMovie}
+  name="Engineer"
+/>
+```
+`className`には`member-icon`を設定してください。
+`imgFile`には追加するメンバーの画像を設定してください。
+`movieFile`にはマウスオーバーしている時に表示されるアニメーション画像（.pngまたは.gifアニメーションファイル）を設定してください。
+`name`にはメンバー画像の下に表示される文字列を指定してください。
+
 ## ディレクトリ構成
 src  
 ├── components  // 主に部品として使うコンポーネント  
