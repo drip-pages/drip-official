@@ -22,7 +22,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
 
   constructor(props: HeaderProps) {
     super(props)
-    if(this.props.location.pathname === '/en') {
+    if (this.props.location.pathname === '/en') {
       i18n.changeLanguage('en')
     }
   }
