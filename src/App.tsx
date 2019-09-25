@@ -24,8 +24,17 @@ function App() {
             showMenu={show}
           />
           <Switch>
-            <Route exact path="/" render={() => <Home items={NewsItems} onInit={() => setShow(false)} />} />
+            <Route
+              exact
+              path="/"
+              render={() => <Home items={NewsItems} onInit={() => setShow(false)} languageJa={true} />}
+            />
             <Route path="/news" render={() => <News items={NewsItems} onInit={() => setShow(false)} />} />
+            <Route
+              exact
+              path="/en"
+              render={() => <Home items={NewsItems} onInit={() => setShow(false)} languageJa={false} />}
+            />
             <Route component={PageNotFound} />
           </Switch>
           <Footer />

@@ -1,16 +1,16 @@
-import React from 'react'
+import * as React from 'react'
 import headerLogo from '../../img/navi.png'
 import './Header.scss'
 import classNames from 'classnames'
-import { Link } from 'react-router-dom'
+import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
 import HurgerButton from '../HurgerButton'
-import i18n from 'i18next'
 import { Translation } from 'react-i18next'
+import i18n from 'i18next'
 
 type HeaderProps = {
   showMenu: boolean
   toogleShowAccordionMenu: () => void
-}
+} & RouteComponentProps
 
 type HeaderState = {
   value: number
@@ -20,17 +20,15 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     value: 0,
   }
 
+  constructor(props: HeaderProps) {
+    super(props)
+    if (this.props.location.pathname === '/en') {
+      i18n.changeLanguage('en')
+    }
+  }
+
   handleMenuButton = () => {
     this.props.toogleShowAccordionMenu()
-  }
-
-  hadleAccordionMenuTranslationButton = () => {
-    this.props.toogleShowAccordionMenu()
-    i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')
-  }
-
-  handleTranslationButton = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ja' : 'en')
   }
 
   render() {
@@ -57,9 +55,11 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
                   <button className="item"> Contact </button>
                 </a>
-                <button className="item" onClick={this.handleTranslationButton}>
-                  <Translation>{t => t('headerButton')}</Translation>
-                </button>
+                <Link to={i18n.language === 'ja' ? '/en' : '/'}>
+                  <button className="item" onClick={() => this.forceUpdate()}>
+                    <Translation>{t => t('headerButton')}</Translation>
+                  </button>
+                </Link>
               </span>
             </span>
           </div>
@@ -73,9 +73,11 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
               <li className="item">Contact</li>
             </a>
-            <li className="item" onClick={this.hadleAccordionMenuTranslationButton}>
-              <Translation>{t => t('headerButton')}</Translation>
-            </li>
+            <Link to={i18n.language === 'ja' ? '/en' : '/'}>
+              <li className="item">
+                <Translation>{t => t('headerButton')}</Translation>
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="padding-area" />
@@ -84,4 +86,4 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   }
 }
 
-export default Header
+export default withRouter(Header)
