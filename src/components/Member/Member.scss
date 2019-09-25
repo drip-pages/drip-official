@@ -1,6 +1,11 @@
 .Member {
   width: 240px;
   position: relative;
+
+  .member-image {
+    width: 100%;
+  }
+
   p {
     text-align: center;
   }
