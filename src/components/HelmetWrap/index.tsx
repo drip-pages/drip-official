@@ -1,5 +1,13 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
+import naitoAni from '../../img/naito-ani.gif'
+import masterAni from '../../img/master-ani.gif'
+import payAni from '../../img/mega-ani.gif'
+import necoAni from '../../img/neco-ani.gif'
+import ogwAni from '../../img/police-ani.gif'
+import pieerAni from '../../img/pieer-ani.png'
+import tkAni from '../../img/tk-ani.png'
+import ownerAni from '../../img/owner-ani.png'
 
 // NOTE: metaタグのdescriptionに書く内容
 const description =
@@ -21,6 +29,16 @@ const HelmetWrap = () => (
       { property: 'og:description', content: description },
       { property: 'og:url', content: 'http://drip.drecom.co.jp' }, // NOTE: 本家URLであることに留意するように
       { name: 'twitter:card', content: 'summary' },
+    ]}
+    link={[
+      { rel: 'preload', href: naitoAni, as: 'image' },
+      { rel: 'preload', href: masterAni, as: 'image' },
+      { rel: 'preload', href: payAni, as: 'image' },
+      { rel: 'preload', href: necoAni, as: 'image' },
+      { rel: 'preload', href: ogwAni, as: 'image' },
+      { rel: 'preload', href: pieerAni, as: 'image' },
+      { rel: 'preload', href: tkAni, as: 'image' },
+      { rel: 'preload', href: ownerAni, as: 'image' },
     ]}
   />
 )
