@@ -3,23 +3,25 @@ import headerLogo from '../../img/navi.png'
 import './Header.scss'
 import classNames from 'classnames'
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
-import HurgerButton from '../HurgerButton'
+import HamburgerButton from '../HamburgerButton'
 import { Translation } from 'react-i18next'
 import i18n from 'i18next'
+import { connect } from 'react-redux'
+import { ReduxState } from '../../reducers'
+import { Action, Dispatch } from 'redux'
+import { setIsShowMenu } from '../../actions/header'
 
-type HeaderProps = {
-  showMenu: boolean
-  toogleShowAccordionMenu: () => void
-} & RouteComponentProps
-
-type HeaderState = {
-  value: number
+type MapDispatchToProps = {
+  setIsShowMenu: (isShowMenu: boolean) => void
 }
-class Header extends React.Component<HeaderProps, HeaderState> {
-  state = {
-    value: 0,
-  }
 
+type MapStateToProps = {
+  isShowMenu: boolean
+}
+
+type HeaderProps = RouteComponentProps & MapDispatchToProps & MapStateToProps
+
+class Header extends React.Component<HeaderProps> {
   constructor(props: HeaderProps) {
     super(props)
     if (this.props.location.pathname === '/en') {
@@ -28,11 +30,12 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   }
 
   handleMenuButton = () => {
-    this.props.toogleShowAccordionMenu()
+    const { isShowMenu, setIsShowMenu } = this.props
+    isShowMenu ? setIsShowMenu(false) : setIsShowMenu(true)
   }
 
   render() {
-    const { showMenu } = this.props
+    const { isShowMenu } = this.props
     return (
       <div className="Header">
         <div className="fixed-area">
@@ -42,7 +45,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             </Link>
             <span className="menu-area">
               <span className="native-button">
-                <HurgerButton onClick={this.handleMenuButton} show={showMenu} />
+                <HamburgerButton onClick={this.handleMenuButton} show={isShowMenu} />
               </span>
 
               <span className="non-native-buttons">
@@ -63,7 +66,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
               </span>
             </span>
           </div>
-          <ul className={classNames('underMenu', { show: showMenu })}>
+          <ul className={classNames('underMenu', { show: isShowMenu })}>
             <Link to="/news">
               <li className="item">News</li>
             </Link>
@@ -86,4 +89,15 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   }
 }
 
-export default withRouter(Header)
+const mapStateToProps: (state: ReduxState) => MapStateToProps = state => ({
+  isShowMenu: state.header.isShowMenu,
+})
+
+const mapDispatchToProps: (dispatch: Dispatch<Action>) => MapDispatchToProps = dispatch => ({
+  setIsShowMenu: isShowMenu => dispatch(setIsShowMenu(isShowMenu)),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(Header))

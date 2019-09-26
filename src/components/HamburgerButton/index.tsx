@@ -1,26 +1,26 @@
 import React from 'react'
-import './HurgerButton.scss'
+import './HamburgerButton.scss'
 import { ReactComponent as ThreeLine } from '../../img/threeLine.svg'
 import { ReactComponent as Batsu } from '../../img/batsu.svg'
 
-type HurgerButtonProps = {
+type HamburgerButtonProps = {
   onClick: () => void
   show: boolean
 }
 
-class HurgerButton extends React.Component<HurgerButtonProps, {}> {
-  handleHurgerButtonClick = () => {
+class HamburgerButton extends React.Component<HamburgerButtonProps, {}> {
+  handleHamburgerButtonClick = () => {
     this.props.onClick()
   }
 
   render() {
     const { show } = this.props
     return (
-      <span className="HurgerButton" onClick={this.handleHurgerButtonClick}>
+      <span className="HamburgerButton" onClick={this.handleHamburgerButtonClick}>
         {show ? <Batsu /> : <ThreeLine />}
       </span>
     )
   }
 }
 
-export default HurgerButton
+export default HamburgerButton

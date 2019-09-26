@@ -6,10 +6,16 @@ import OurInvention from '../../components/OurInvention'
 import Team from '../../components/Team'
 import ContactUs from '../../components/ContactUs'
 import i18n from 'i18next'
+import { connect } from 'react-redux'
+import { setIsShowMenu } from '../../actions/header'
+import { Action, Dispatch } from 'redux'
 
-type HomeProps = {
+type MapDispatchToProps = {
+  setIsShowMenu: (isShowMenu: boolean) => void
+}
+
+type HomeProps = MapDispatchToProps & {
   items: any[]
-  onInit: () => void
   languageJa: boolean
 }
 
@@ -18,13 +24,14 @@ class Home extends React.Component<HomeProps, {}> {
     super(props)
     i18n.changeLanguage(this.props.languageJa ? 'ja' : 'en')
   }
+
   componentDidMount(): void {
-    this.props.onInit()
+    this.props.setIsShowMenu(false)
   }
 
   componentDidUpdate(prevProps: HomeProps): void {
     if (this.props.languageJa !== prevProps.languageJa) {
-      this.props.onInit()
+      this.props.setIsShowMenu(false)
       i18n.changeLanguage(this.props.languageJa ? 'ja' : 'en')
     }
   }
@@ -43,4 +50,11 @@ class Home extends React.Component<HomeProps, {}> {
   }
 }
 
-export default Home
+const mapDispatchToProps: (dispatch: Dispatch<Action>) => MapDispatchToProps = dispatch => ({
+  setIsShowMenu: isShowMenu => dispatch(setIsShowMenu(isShowMenu)),
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Home)
