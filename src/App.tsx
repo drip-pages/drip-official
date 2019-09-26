@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.scss'
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Header from './components/Header'
@@ -11,30 +11,16 @@ import HelmetWrap from './components/HelmetWrap'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
-  const [show, setShow] = useState(false)
   return (
     <div className="App">
       <HelmetWrap />
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ScrollToTop>
-          <Header
-            toogleShowAccordionMenu={() => {
-              show ? setShow(false) : setShow(true)
-            }}
-            showMenu={show}
-          />
+          <Header />
           <Switch>
-            <Route
-              exact
-              path="/"
-              render={() => <Home items={NewsItems} onInit={() => setShow(false)} languageJa={true} />}
-            />
-            <Route path="/news" render={() => <News items={NewsItems} onInit={() => setShow(false)} />} />
-            <Route
-              exact
-              path="/en"
-              render={() => <Home items={NewsItems} onInit={() => setShow(false)} languageJa={false} />}
-            />
+            <Route exact path="/" render={() => <Home items={NewsItems} languageJa={true} />} />
+            <Route path="/news" render={() => <News items={NewsItems} />} />
+            <Route exact path="/en" render={() => <Home items={NewsItems} languageJa={false} />} />
             <Route component={PageNotFound} />
           </Switch>
           <Footer />

@@ -1,14 +1,20 @@
 import * as React from 'react'
 import NewsList from '../../components/NewsList'
+import { Action, Dispatch } from 'redux'
+import { setIsShowMenu } from '../../actions/header'
+import { connect } from 'react-redux'
 
-type NewsProps = {
-  items: any[]
-  onInit: () => void
+type MapDispatchToProps = {
+  setIsShowMenu: (isShowMenu: boolean) => void
 }
 
-class News extends React.Component<NewsProps, {}> {
+type NewsProps = MapDispatchToProps & {
+  items: any[]
+}
+
+class News extends React.Component<NewsProps> {
   componentDidMount(): void {
-    this.props.onInit()
+    this.props.setIsShowMenu(false)
   }
 
   render() {
@@ -23,4 +29,11 @@ class News extends React.Component<NewsProps, {}> {
   }
 }
 
-export default News
+const mapDispatchToProps: (dispatch: Dispatch<Action>) => MapDispatchToProps = dispatch => ({
+  setIsShowMenu: isShowMenu => dispatch(setIsShowMenu(isShowMenu)),
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(News)
