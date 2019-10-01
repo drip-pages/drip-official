@@ -1,6 +1,7 @@
 #!/bin/bash -eu
 
 TODAY=$(date "+%Y%m%d-%H%M%S")
+yarn install
 yarn build
 git checkout gh-pages
 git checkout -b gh-pages-${TODAY}
