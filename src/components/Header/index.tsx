@@ -34,6 +34,11 @@ class Header extends React.Component<HeaderProps> {
     isShowMenu ? setIsShowMenu(false) : setIsShowMenu(true)
   }
 
+  handleOutAreaClick = () => {
+    const { isShowMenu, setIsShowMenu } = this.props
+    isShowMenu && setIsShowMenu(false)
+  }
+
   render() {
     const { isShowMenu } = this.props
     return (
@@ -66,22 +71,25 @@ class Header extends React.Component<HeaderProps> {
               </span>
             </span>
           </div>
-          <ul className={classNames('underMenu', { show: isShowMenu })}>
-            <Link to="/news">
-              <li className="item">News</li>
-            </Link>
-            <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
-              <li className="item">Company</li>
-            </a>
-            <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
-              <li className="item">Contact</li>
-            </a>
-            <Link to={i18n.language === 'ja' ? '/en' : '/'}>
-              <li className="item">
-                <Translation>{t => t('headerButton')}</Translation>
-              </li>
-            </Link>
-          </ul>
+          <div className={classNames('underMenuArea', { show: isShowMenu })}>
+            <ul className="accordionMenu">
+              <Link to="/news">
+                <li className="item">News</li>
+              </Link>
+              <a href="https://www.drecom.co.jp/company/" target="_blank" rel="noopener noreferrer">
+                <li className="item">Company</li>
+              </a>
+              <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
+                <li className="item">Contact</li>
+              </a>
+              <Link to={i18n.language === 'ja' ? '/en' : '/'}>
+                <li className="item">
+                  <Translation>{t => t('headerButton')}</Translation>
+                </li>
+              </Link>
+            </ul>
+            <div className="outArea" onClick={this.handleOutAreaClick} />
+          </div>
         </div>
         <div className="padding-area" />
       </div>
