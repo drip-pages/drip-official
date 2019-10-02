@@ -11,6 +11,8 @@ import { ReduxState } from '../../reducers'
 import { Action, Dispatch } from 'redux'
 import { setIsShowMenu } from '../../actions/header'
 
+const ACCORDION_MENU_CLOSE_WINDOW_WIDTH = 800
+
 type MapDispatchToProps = {
   setIsShowMenu: (isShowMenu: boolean) => void
 }
@@ -26,6 +28,16 @@ class Header extends React.Component<HeaderProps> {
     super(props)
     if (this.props.location.pathname === '/en') {
       i18n.changeLanguage('en')
+    }
+  }
+
+  componentDidMount(): void {
+    window.addEventListener('resize', this.updateDimensions)
+  }
+
+  updateDimensions = () => {
+    if (window.innerWidth > ACCORDION_MENU_CLOSE_WINDOW_WIDTH) {
+      this.props.setIsShowMenu(false)
     }
   }
 
