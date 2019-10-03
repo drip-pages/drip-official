@@ -9,18 +9,20 @@ import Footer from './components/Footer'
 import NewsItems from './data/newsItems.json'
 import HelmetWrap from './components/HelmetWrap'
 import ScrollToTop from './components/ScrollToTop'
+import Translator from './containers/Translator'
 
 function App() {
   return (
     <div className="App">
       <HelmetWrap />
       <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Translator />
         <ScrollToTop>
           <Header />
           <Switch>
-            <Route exact path="/" render={() => <Home items={NewsItems} languageJa={true} />} />
+            <Route exact path="/" render={() => <Home items={NewsItems} />} />
             <Route path="/news" render={() => <News items={NewsItems} />} />
-            <Route exact path="/en" render={() => <Home items={NewsItems} languageJa={false} />} />
+            <Route exact path="/en" render={() => <Home items={NewsItems} />} />
             <Route component={PageNotFound} />
           </Switch>
           <Footer />

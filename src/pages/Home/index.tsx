@@ -5,7 +5,6 @@ import News from '../../components/News'
 import OurInvention from '../../components/OurInvention'
 import Team from '../../components/Team'
 import ContactUs from '../../components/ContactUs'
-import i18n from 'i18next'
 import { connect } from 'react-redux'
 import { setIsShowMenu } from '../../actions/header'
 import { Action, Dispatch } from 'redux'
@@ -16,24 +15,11 @@ type MapDispatchToProps = {
 
 type HomeProps = MapDispatchToProps & {
   items: any[]
-  languageJa: boolean
 }
 
 class Home extends React.Component<HomeProps, {}> {
-  constructor(props: HomeProps) {
-    super(props)
-    i18n.changeLanguage(this.props.languageJa ? 'ja' : 'en')
-  }
-
   componentDidMount(): void {
     this.props.setIsShowMenu(false)
-  }
-
-  componentDidUpdate(prevProps: HomeProps): void {
-    if (this.props.languageJa !== prevProps.languageJa) {
-      this.props.setIsShowMenu(false)
-      i18n.changeLanguage(this.props.languageJa ? 'ja' : 'en')
-    }
   }
 
   render() {
