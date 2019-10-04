@@ -10,27 +10,24 @@ import { connect } from 'react-redux'
 import { ReduxState } from '../../reducers'
 import { Action, Dispatch } from 'redux'
 import { setIsShowMenu } from '../../actions/header'
+import { languageType } from '../../types/language'
+import {setLanguage} from "../../actions/translator";
 
 const ACCORDION_MENU_CLOSE_WINDOW_WIDTH = 800
 
 type MapDispatchToProps = {
   setIsShowMenu: (isShowMenu: boolean) => void
+  setLanguage: (language: languageType) => void
 }
 
 type MapStateToProps = {
   isShowMenu: boolean
+  language: languageType
 }
 
 type HeaderProps = RouteComponentProps & MapDispatchToProps & MapStateToProps
 
 class Header extends React.Component<HeaderProps> {
-  constructor(props: HeaderProps) {
-    super(props)
-    if (this.props.location.pathname === '/en') {
-      i18n.changeLanguage('en')
-    }
-  }
-
   componentDidMount(): void {
     window.addEventListener('resize', this.updateDimensions)
   }
@@ -52,7 +49,7 @@ class Header extends React.Component<HeaderProps> {
   }
 
   render() {
-    const { isShowMenu } = this.props
+    const { isShowMenu, language } = this.props
     return (
       <div className="Header">
         <div className="fixed-area">
@@ -75,8 +72,8 @@ class Header extends React.Component<HeaderProps> {
                 <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
                   <button className="item"> Contact </button>
                 </a>
-                <Link to={i18n.language === 'ja' ? '/en' : '/'}>
-                  <button className="item" onClick={() => this.forceUpdate()}>
+                <Link to={language === 'ja' ? '/en' : '/'}>
+                  <button className="item">
                     <Translation>{t => t('headerButton')}</Translation>
                   </button>
                 </Link>
@@ -94,7 +91,7 @@ class Header extends React.Component<HeaderProps> {
               <a href="https://goo.gl/forms/my00T6ZbZK" target="_blank" rel="noopener noreferrer">
                 <li className="item">Contact</li>
               </a>
-              <Link to={i18n.language === 'ja' ? '/en' : '/'}>
+              <Link to={language === 'ja' ? '/en' : '/'}>
                 <li className="item">
                   <Translation>{t => t('headerButton')}</Translation>
                 </li>
@@ -111,10 +108,12 @@ class Header extends React.Component<HeaderProps> {
 
 const mapStateToProps: (state: ReduxState) => MapStateToProps = state => ({
   isShowMenu: state.header.isShowMenu,
+  language: state.translator.language,
 })
 
 const mapDispatchToProps: (dispatch: Dispatch<Action>) => MapDispatchToProps = dispatch => ({
   setIsShowMenu: isShowMenu => dispatch(setIsShowMenu(isShowMenu)),
+  setLanguage: language => dispatch(setLanguage(language)),
 })
 
 export default connect(
