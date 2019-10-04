@@ -13,11 +13,7 @@ type MapDispatchToProps = {
   setIsShowMenu: (isShowMenu: boolean) => void
 }
 
-type HomeProps = MapDispatchToProps & {
-  items: any[]
-}
-
-class Home extends React.Component<HomeProps, {}> {
+class Home extends React.Component<MapDispatchToProps, {}> {
   componentDidMount(): void {
     this.props.setIsShowMenu(false)
   }
@@ -27,7 +23,7 @@ class Home extends React.Component<HomeProps, {}> {
       <div className="Home">
         <TopLogo />
         <Mission />
-        <News items={this.props.items} />
+        <News />
         <OurInvention />
         <Team />
         <ContactUs />

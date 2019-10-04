@@ -3,16 +3,13 @@ import NewsList from '../../components/NewsList'
 import { Action, Dispatch } from 'redux'
 import { setIsShowMenu } from '../../actions/header'
 import { connect } from 'react-redux'
+import NewsItems from '../../data/newsItems.json'
 
 type MapDispatchToProps = {
   setIsShowMenu: (isShowMenu: boolean) => void
 }
 
-type NewsProps = MapDispatchToProps & {
-  items: any[]
-}
-
-class News extends React.Component<NewsProps> {
+class News extends React.Component<MapDispatchToProps> {
   componentDidMount(): void {
     this.props.setIsShowMenu(false)
   }
@@ -22,7 +19,7 @@ class News extends React.Component<NewsProps> {
       <div className="News">
         <h2>News</h2>
         <div className="content">
-          <NewsList items={this.props.items} />
+          <NewsList items={NewsItems} />
         </div>
       </div>
     )

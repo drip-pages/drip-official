@@ -6,7 +6,6 @@ import Home from './pages/Home'
 import News from './pages/News'
 import PageNotFound from './pages/PageNotFound'
 import Footer from './components/Footer'
-import NewsItems from './data/newsItems.json'
 import HelmetWrap from './components/HelmetWrap'
 import ScrollToTop from './components/ScrollToTop'
 import Translator from './containers/Translator'
@@ -20,9 +19,9 @@ function App() {
         <ScrollToTop>
           <Header />
           <Switch>
-            <Route exact path="/" render={() => <Home items={NewsItems} />} />
-            <Route path="/news" render={() => <News items={NewsItems} />} />
-            <Route exact path="/en" render={() => <Home items={NewsItems} />} />
+            <Route exact path="/" render={() => <Home />} />
+            <Route path="/news" render={() => <News />} />
+            <Route exact path="/en" render={() => <Home />} />
             <Route component={PageNotFound} />
           </Switch>
           <Footer />
