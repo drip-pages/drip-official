@@ -32,11 +32,12 @@ class Translator extends React.Component<TranslatorProps> {
     }
   }
 
-  componentDidUpdate(prevProps: TranslatorProps): void {
-    if (this.props.location !== prevProps.location) {
-      const { location, setLanguage, setIsShowMenu } = this.props
+  // 全てのコンポーネントのrender()が走る前に言語切り替えの処理をする必要があるため、WillUpdateに書く
+  componentWillUpdate(nextProps: TranslatorProps): void {
+    if (this.props.location !== nextProps.location) {
+      const { setLanguage, setIsShowMenu } = this.props
       setIsShowMenu(false)
-      if (location.pathname === '/en') {
+      if (nextProps.location.pathname === '/en' || nextProps.location.pathname === '/en/') {
         i18n.changeLanguage('en')
         setLanguage('en')
       } else {
