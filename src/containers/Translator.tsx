@@ -21,7 +21,7 @@ class Translator extends React.Component<TranslatorProps> {
   constructor(props: TranslatorProps) {
     super(props)
     const { location, setLanguage } = this.props
-    if (location.pathname === '/en') {
+    if (location.pathname === '/en' || location.pathname === '/en/') {
       i18n.changeLanguage('en')
       setLanguage('en')
     } else {
