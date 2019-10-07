@@ -5,13 +5,12 @@ import classNames from 'classnames'
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
 import HamburgerButton from '../HamburgerButton'
 import { Translation } from 'react-i18next'
-import i18n from 'i18next'
 import { connect } from 'react-redux'
 import { ReduxState } from '../../reducers'
 import { Action, Dispatch } from 'redux'
 import { setIsShowMenu } from '../../actions/header'
 import { languageType } from '../../types/language'
-import {setLanguage} from "../../actions/translator";
+import { setLanguage } from '../../actions/translator'
 
 const ACCORDION_MENU_CLOSE_WINDOW_WIDTH = 800
 

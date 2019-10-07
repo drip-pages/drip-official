@@ -6,9 +6,11 @@ import { Action, Dispatch } from 'redux'
 import { RouteComponentProps, withRouter } from 'react-router'
 import i18n from 'i18next'
 import { setLanguage } from '../actions/translator'
+import { setIsShowMenu } from '../actions/header'
 
 type MapDispatchToProps = {
   setLanguage: (language: languageType) => void
+  setIsShowMenu: (isShowMenu: boolean) => void
 }
 
 type MapStateToProps = {
@@ -32,7 +34,8 @@ class Translator extends React.Component<TranslatorProps> {
 
   componentDidUpdate(prevProps: TranslatorProps): void {
     if (this.props.location !== prevProps.location) {
-      const { location, setLanguage } = this.props
+      const { location, setLanguage, setIsShowMenu } = this.props
+      setIsShowMenu(false)
       if (location.pathname === '/en') {
         i18n.changeLanguage('en')
         setLanguage('en')
@@ -54,6 +57,7 @@ const mapStateToProps: (state: ReduxState) => MapStateToProps = state => ({
 
 const mapDispatchToProps: (dispatch: Dispatch<Action>) => MapDispatchToProps = dispatch => ({
   setLanguage: language => dispatch(setLanguage(language)),
+  setIsShowMenu: isShowMenu => dispatch(setIsShowMenu(isShowMenu)),
 })
 
 export default connect(
