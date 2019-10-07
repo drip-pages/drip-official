@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "react-snap",
+    "postbuild": "react-snap && cp -R build/img build/en/img && cp -R build/img build/news/img",
     "deploy": "bash deploy.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
