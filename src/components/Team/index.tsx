@@ -45,11 +45,11 @@ const Team = () => {
         <Member className="member-icon" imgFile={owner} movieFile={ownerAni} name="Engineer" />
         <Member className="member-icon" imgFile={pieer} movieFile={pieerAni} name="Engineer & Planner" />
         <Member className="member-icon" imgFile={tk} movieFile={tkAni} name="Engineer" />
-        <Member className="member-icon" imgFile={blackmask} movieFile={blackmaskAni} name="Engineer" />
-        <Member className="member-icon" imgFile={flyup} movieFile={flyupAni} name="Engineer" />
-        <Member className="member-icon" imgFile={bluehair} movieFile={bluehairAni} name="Engineer" />
-        <Member className="member-icon" imgFile={pinkicon} movieFile={pinkiconAni} name="Engineer" />
-        <Member className="member-icon" imgFile={colorfulhat} movieFile={colorfulhatAni} name="Engineer" />
+        <Member className="member-icon" imgFile={blackmask} movieFile={blackmaskAni} name="Designer" />
+        <Member className="member-icon" imgFile={flyup} movieFile={flyupAni} name="Planner" />
+        <Member className="member-icon" imgFile={bluehair} movieFile={bluehairAni} name="Planner" />
+        <Member className="member-icon" imgFile={pinkicon} movieFile={pinkiconAni} name="Designer" />
+        <Member className="member-icon" imgFile={colorfulhat} movieFile={colorfulhatAni} name="Planner" />
       </div>
     </Slide>
   )
