@@ -213,7 +213,14 @@ render() {
 1. drip-officialディレクトリの中身を **以下のファイルを除き** 削除する。
 1. buildディレクトリ内の全てのファイルをdrip-officialディレクトリにコピペする。
 1. コミット、プッシュしたのち、github.comにてgh-pagesブランチにマージするプルリクエストを作成する。
+1. ページを構成するために必要なファイルが全て揃っているか確認する
+    1. gh-pagesから作成したgh-pages-xxブランチをローカルから一時削除する
+    1. gh-pages-xxブランチをgithubよりpullする
+    1. http-serverなどのコマンドを使い、ブラウザ表示して確認する (ex:`$ http-server ./drip-official`)
 1. github.comにてgh-pagesブランチにマージする。
+
+http-serverについてはこちら
+https://www.npmjs.com/package/http-server
 
 削除しないファイル（ディレクトリ）
 ```
