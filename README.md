@@ -222,6 +222,12 @@ render() {
 http-serverについてはこちら
 https://www.npmjs.com/package/http-server
 
+### 諸注意
+浸透まで時間がかかり、完全に浸透し切るまで画像が表示されないことがあった。
+その時は38分後、画像が表示されるようになった。
+https://github.com/drip-pages/drip-official/issues/110
+（地域差で浸透時間が変わっているような）
+
 削除しないファイル（ディレクトリ）
 ```
 CNAME
