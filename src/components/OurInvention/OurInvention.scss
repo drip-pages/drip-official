@@ -34,29 +34,6 @@
     }
   }
 
-  .loveChain {
-    background-color: #e18c84;
-    color: $colorWhite;
-    a {
-      color: $colorWhite;
-    }
-    strong {
-      margin-top: 1em;
-      font-size: 25px;
-    }
-
-    @media (min-width: $deviceWidth) {
-      .bigLogo {
-        width: 40vw;
-      }
-      .content-area {
-        .smallLogo {
-          margin-top: 10px;
-        }
-      }
-    }
-  }
-
   p {
     margin: 1em 0;
     font-size: 20px;

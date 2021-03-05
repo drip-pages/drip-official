@@ -5,7 +5,6 @@ import masterAni from '../../img/master-ani.gif'
 import payAni from '../../img/mega-ani.gif'
 import necoAni from '../../img/neco-ani.gif'
 import ogwAni from '../../img/police-ani.gif'
-import pieerAni from '../../img/pieer-ani.png'
 import tkAni from '../../img/tk-ani.png'
 import ownerAni from '../../img/owner-ani.png'
 
@@ -36,7 +35,6 @@ const HelmetWrap = () => (
       { rel: 'preload', href: payAni, as: 'image' },
       { rel: 'preload', href: necoAni, as: 'image' },
       { rel: 'preload', href: ogwAni, as: 'image' },
-      { rel: 'preload', href: pieerAni, as: 'image' },
       { rel: 'preload', href: tkAni, as: 'image' },
       { rel: 'preload', href: ownerAni, as: 'image' },
     ]}
