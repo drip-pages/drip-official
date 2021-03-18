@@ -25,8 +25,8 @@ class Home extends React.Component<MapDispatchToProps, {}> {
         <Mission />
         <News />
         <OurInvention />
-        <Team />
         <ContactUs />
+        <Team />
       </div>
     )
   }

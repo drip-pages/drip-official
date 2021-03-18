@@ -24,7 +24,7 @@ const Footer = () => (
         <img className="twitter icon" alt="twitter" src={twitterIcon} />
       </a>
     </div>
-    <p>Copyright 2019 Drecom Co., Ltd. All Rights Reserved.</p>
+    <p>© Drecom Co.,Ltd. All rights Reserved.</p>
   </Slide>
 )
 
