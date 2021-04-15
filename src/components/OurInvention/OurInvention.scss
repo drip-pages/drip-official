@@ -5,6 +5,18 @@
     background-color: $colorGray
   }
 
+  .rooot {
+    @media (min-width: $deviceWidth) {
+      .bigLogo {
+        margin-right: 9vw;
+        margin-left: auto;
+      }
+      .smallLogo {
+        margin-top: 30px;
+      }
+    }
+  }
+
   .arow {
     background-color: $colorBlack;
     color: $colorWhite;

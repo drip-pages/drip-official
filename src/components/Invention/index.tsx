@@ -6,20 +6,21 @@ import Slide from '../Slide'
 
 type InventionProps = {
   bigLogo: string
-  smallLogo: string
+  smallLogo?: string
   className?: string
+  isCenteringContent?: boolean
   children?: ReactNode | null
 }
 
 class Invention extends React.Component<InventionProps> {
   render() {
-    const { bigLogo, smallLogo, className, children } = this.props
+    const { bigLogo, smallLogo, className, isCenteringContent, children } = this.props
     return (
       <Slide className={classNames('Invention', className)}>
-        <img className="mobile-show-logo" src={smallLogo} alt="smallLogo" />
+        {smallLogo && <img className="mobile-show-logo" src={smallLogo} alt="smallLogo" />}
         <img className="bigLogo" src={bigLogo} alt="bigLogo" />
-        <div className="content-area">
-          <img className="smallLogo" src={smallLogo} alt="smallLogo" />
+        <div className={classNames("content-area", isCenteringContent && "centering")}>
+          {smallLogo && <img className="smallLogo" src={smallLogo} alt="smallLogo" />}
           {children}
         </div>
       </Slide>

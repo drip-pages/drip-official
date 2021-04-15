@@ -27,6 +27,11 @@
       height: 5vw;
     }
   }
+
+  .centering {
+    justify-content: center;
+  }
+  
   @media (min-width: $deviceWidth) {
     padding-left: 0;
     padding-right: 0;
