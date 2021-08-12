@@ -7,6 +7,11 @@ import ogwAni from '../../img/police-ani.gif'
 import tkAni from '../../img/tk-ani.png'
 import kmokAni from '../../img/kmok_ani.gif'
 import tymAni from '../../img/tym_ani.gif'
+import blackmaskAni from '../../img/blackmask-ani.gif'
+import bluehairAni from '../../img/bluehair-ani.gif'
+import colorfulhatAni from '../../img/colorfulhat-ani.gif'
+import flyupAni from '../../img/flyup-ani.gif'
+import pinkiconAni from '../../img/pinkicon-ani.gif'
 
 // NOTE: metaタグのdescriptionに書く内容
 const description =
@@ -37,6 +42,11 @@ const HelmetWrap = () => (
       { rel: 'preload', href: tkAni, as: 'image' },
       { rel: 'preload', href: kmokAni, as: 'image' },
       { rel: 'preload', href: tymAni, as: 'image' },
+      { rel: 'preload', href: blackmaskAni, as: 'image' },
+      { rel: 'preload', href: bluehairAni, as: 'image' },
+      { rel: 'preload', href: colorfulhatAni, as: 'image' },
+      { rel: 'preload', href: flyupAni, as: 'image' },
+      { rel: 'preload', href: pinkiconAni, as: 'image' },
     ]}
   />
 )
