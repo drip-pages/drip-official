@@ -5,6 +5,8 @@ import payAni from '../../img/mega-ani.gif'
 import necoAni from '../../img/neco-ani.gif'
 import ogwAni from '../../img/police-ani.gif'
 import tkAni from '../../img/tk-ani.png'
+import kmokAni from '../../img/kmok_ani.gif'
+import tymAni from '../../img/tym_ani.gif'
 
 // NOTE: metaタグのdescriptionに書く内容
 const description =
@@ -33,6 +35,8 @@ const HelmetWrap = () => (
       { rel: 'preload', href: necoAni, as: 'image' },
       { rel: 'preload', href: ogwAni, as: 'image' },
       { rel: 'preload', href: tkAni, as: 'image' },
+      { rel: 'preload', href: kmokAni, as: 'image' },
+      { rel: 'preload', href: tymAni, as: 'image' },
     ]}
   />
 )

@@ -21,6 +21,10 @@ import flyup from '../../img/flyup.jpg'
 import flyupAni from '../../img/flyup-ani.gif'
 import pinkicon from '../../img/pinkicon.png'
 import pinkiconAni from '../../img/pinkicon-ani.gif'
+import kmok from '../../img/kmok.png'
+import kmokAni from '../../img/kmok_ani.gif'
+import tym from '../../img/tym.jpeg'
+import tymAni from '../../img/tym_ani.gif'
 import { useTranslation } from 'react-i18next'
 import Slide from '../Slide'
 
@@ -35,8 +39,10 @@ const Team = () => {
         <Member className="member-icon" imgFile={neco} movieFile={necoAni} name="Director" />
         <Member className="member-icon" imgFile={pay} movieFile={payAni} name="Planner" />
         <Member className="member-icon" imgFile={ogw} movieFile={ogwAni} name="Engineer" />
-        <Member className="member-icon" imgFile={tk} movieFile={tkAni} name="Engineer" />
+        <Member className="member-icon" imgFile={kmok} movieFile={kmokAni} name="Planner" />
         <Member className="member-icon" imgFile={blackmask} movieFile={blackmaskAni} name="Designer" />
+        <Member className="member-icon" imgFile={tym} movieFile={tymAni} name="Engineer" />
+        <Member className="member-icon" imgFile={tk} movieFile={tkAni} name="Engineer" />
         <Member className="member-icon" imgFile={flyup} movieFile={flyupAni} name="Planner" />
         <Member className="member-icon" imgFile={bluehair} movieFile={bluehairAni} name="Planner" />
         <Member className="member-icon" imgFile={pinkicon} movieFile={pinkiconAni} name="Designer" />
