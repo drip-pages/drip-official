@@ -2,8 +2,6 @@ import * as React from 'react'
 import Member from '../Member'
 import naito from '../../img/naito.jpg'
 import naitoAni from '../../img/naito-ani.gif'
-import master from '../../img/master.jpg'
-import masterAni from '../../img/master-ani.gif'
 import pay from '../../img/mega.jpg'
 import payAni from '../../img/mega-ani.gif'
 import neco from '../../img/fixNeco.png'
@@ -13,8 +11,6 @@ import ogwAni from '../../img/police-ani.gif'
 import './Team.scss'
 import tk from '../../img/tk.jpeg'
 import tkAni from '../../img/tk-ani.png'
-import owner from '../../img/owner.jpg'
-import ownerAni from '../../img/owner-ani.png'
 import blackmask from '../../img/blackmask.png'
 import blackmaskAni from '../../img/blackmask-ani.gif'
 import bluehair from '../../img/bluehair.jpg'
@@ -39,8 +35,6 @@ const Team = () => {
         <Member className="member-icon" imgFile={neco} movieFile={necoAni} name="Director" />
         <Member className="member-icon" imgFile={pay} movieFile={payAni} name="Planner" />
         <Member className="member-icon" imgFile={ogw} movieFile={ogwAni} name="Engineer" />
-        <Member className="member-icon" imgFile={master} movieFile={masterAni} name="Master" />
-        <Member className="member-icon" imgFile={owner} movieFile={ownerAni} name="Engineer" />
         <Member className="member-icon" imgFile={tk} movieFile={tkAni} name="Engineer" />
         <Member className="member-icon" imgFile={blackmask} movieFile={blackmaskAni} name="Designer" />
         <Member className="member-icon" imgFile={flyup} movieFile={flyupAni} name="Planner" />
