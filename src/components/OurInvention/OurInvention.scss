@@ -5,9 +5,42 @@
     background-color: $colorGray
   }
 
+  .rooot {
+    background-image: none;
+    color: $colorBlack;
+
+    .mobile-show-logo {
+      width: 65%;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+
+    .bigLogo {
+      display: none;
+    }
+
+    @media (min-width: $deviceWidth) {
+      background-image: url("../../img/rooot_background.jpeg");
+      background-size: cover;
+
+      .bigLogo {
+        display: block;
+        max-height: 300px;
+      }
+
+      .smallLogo {
+        margin-top: 30px;
+      }
+    }
+  }
+
   .arow {
     background-color: $colorBlack;
     color: $colorWhite;
+
+    .mobile-show-logo {
+      display: none;
+    }
 
     @media (min-width: $deviceWidth) {
       .bigLogo {
@@ -15,6 +48,7 @@
         margin-left: auto;
       }
       .smallLogo {
+        display: block;
         margin-top: 30px;
       }
     }
@@ -23,12 +57,18 @@
   .pillars {
     background-image: url("../../img/6-pillars_background.png");
     background-size: cover;
+
+    .mobile-show-logo {
+      display: none;
+    }
+
     @media (min-width: $deviceWidth) {
       .bigLogo {
         margin-right: 9vw;
         margin-left: auto;
       }
       .smallLogo {
+        display: block;
         margin-top: 30px;
       }
     }
