@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7cfb9f915140c0a2e558402af217e86",
+    "revision": "0006e18a5aa2468868a7e13c4d44a741",
     "url": "/index.html"
   },
   {
-    "revision": "b0fb6516cfdd4aeacd6a",
+    "revision": "180a8df6c41f1de26244",
     "url": "/static/css/2.e975ae8e.chunk.css"
   },
   {
-    "revision": "d70b0fdcdf42c2a9ae5a",
-    "url": "/static/css/main.d7f5c0c7.chunk.css"
+    "revision": "8ee6318862d75eb1e616",
+    "url": "/static/css/main.97a43a39.chunk.css"
   },
   {
-    "revision": "b0fb6516cfdd4aeacd6a",
-    "url": "/static/js/2.23741f3a.chunk.js"
+    "revision": "180a8df6c41f1de26244",
+    "url": "/static/js/2.0c8a4cbb.chunk.js"
   },
   {
     "revision": "3467cd487fb570ac061cbf188cfec23b",
-    "url": "/static/js/2.23741f3a.chunk.js.LICENSE"
+    "url": "/static/js/2.0c8a4cbb.chunk.js.LICENSE"
   },
   {
-    "revision": "d70b0fdcdf42c2a9ae5a",
-    "url": "/static/js/main.d68f13f8.chunk.js"
+    "revision": "8ee6318862d75eb1e616",
+    "url": "/static/js/main.cf82a0e1.chunk.js"
   },
   {
     "revision": "9f079f3d818e7173b9bb",
@@ -38,6 +38,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8c7d067d6be1feaa952f7c60cd8fa59e",
     "url": "/static/media/ArowLogo.8c7d067d.png"
+  },
+  {
+    "revision": "589609e08689882704593cc1ded0e15f",
+    "url": "/static/media/akroglam_background.589609e0.jpeg"
+  },
+  {
+    "revision": "66a9bc32bf8b127cac2e07c943defa07",
+    "url": "/static/media/akroglam_logo.66a9bc32.png"
+  },
+  {
+    "revision": "43061e945386201f8e4e32cafa4bbc04",
+    "url": "/static/media/akroglam_text.43061e94.png"
   },
   {
     "revision": "493bc36ebda81c433c1d3532a9feb0fe",
