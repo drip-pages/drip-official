@@ -23,8 +23,8 @@ const OurInvention = () => {
       </Slide>
       <Invention className="akroglam" bigLogo={emptyImage} smallLogo={akroglamSmallLogo}>
         <img className="text" src={akroglamText} alt={t('inventionAkroglam_1')} />
-        <a href="https://akroglam.com/" target="_blank" rel="noopener noreferrer">
-          https://akroglam.com/
+        <a href="https://lit.link/akroglam" target="_blank" rel="noopener noreferrer">
+          https://lit.link/akroglam
         </a>
       </Invention>
       <Invention className="rooot" bigLogo={emptyImage} smallLogo={roootSmallLogo}>
